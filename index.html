@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>ELITE MOTORS | The World of Automotive Excellence – Jubilee Hills, Hyderabad</title>
+  <meta name="description" content="Discover the world's most extraordinary automobiles under one roof at Elite Motors, Jubilee Hills, Hyderabad, Telangana, India. Supercars, Hypercars, Luxury Sedans, SUVs & EVs." />
+  
+  <!-- Google Fonts: Cormorant Garamond (Luxury Editorial Serif) & Plus Jakarta Sans (Clean Modern Sans) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,500;0,600;0,700;1,400;1,600&family=Plus+Jakarta+Sans:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  
+  <!-- Font Awesome 6 for crisp luxury automotive icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css" />
+
+  <!-- External Stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- PRELOADER -->
+  <div id="preloader" aria-hidden="true">
+    <div class="loader-crest">ELITE MOTORS</div>
+    <div class="loader-bar"></div>
+  </div>
+
+  <!-- TOAST CONTAINER -->
+  <div id="toast-container" aria-live="polite"></div>
+
+  <!-- ========================================================================
+       STICKY NAVIGATION BAR
+       ======================================================================== -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-inner">
+      <a href="#home" class="brand-logo" aria-label="Elite Motors Home">
+        <div class="brand-emblem">EM</div>
+        <div class="brand-text-wrap">
+          <span class="brand-name">ELITE MOTORS</span>
+          <span class="brand-sub">The World of Automotive Excellence</span>
+        </div>
+      </a>
+
+      <nav aria-label="Primary Navigation">
+        <ul class="nav-links">
+          <li><a href="#home">Home</a></li>
+          <li><a href="#explore">Explore Cars</a></li>
+          <li><a href="#brands">Brands</a></li>
+          <li><a href="#compare">Compare Cars</a></li>
+          <li><a href="#collections">Special Collections</a></li>
+          <li><a href="#about">About Us</a></li>
+          <li><a href="#location">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <button type="button" class="nav-icon-btn" id="nav-search-trigger" aria-label="Search Vehicles" title="Search Vehicles">
+          <i class="fa-solid fa-magnifying-glass"></i>
+        </button>
+        <button type="button" class="nav-icon-btn" id="nav-wishlist-trigger" aria-label="Saved Wishlist" title="Saved Wishlist">
+          <i class="fa-regular fa-heart"></i>
+          <span class="badge-count" id="wishlist-badge">0</span>
+        </button>
+        <a href="#test-drive" class="btn btn-gold btn-sm nav-cta-desktop">Book a Test Drive</a>
+        <button type="button" class="nav-icon-btn mobile-menu-btn" id="mobile-menu-open" aria-label="Open Navigation Menu">
+          <i class="fa-solid fa-bars"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- MOBILE NAVIGATION DRAWER -->
+  <aside class="mobile-drawer" id="mobile-drawer" aria-hidden="true">
+    <div>
+      <div style="display:flex; justify-content:space-between; align-items:center;">
+        <span class="brand-name">ELITE MOTORS</span>
+        <button class="nav-icon-btn" id="mobile-menu-close" aria-label="Close Navigation Menu">
+          <i class="fa-solid fa-xmark"></i>
+        </button>
+      </div>
+      <ul class="mobile-nav-list">
+        <li><a href="#home" class="mobile-nav-link">Home</a></li>
+        <li><a href="#explore" class="mobile-nav-link">Explore Cars</a></li>
+        <li><a href="#brands" class="mobile-nav-link">Brands</a></li>
+        <li><a href="#compare" class="mobile-nav-link">Compare Cars</a></li>
+        <li><a href="#collections" class="mobile-nav-link">Special Collections</a></li>
+        <li><a href="#about" class="mobile-nav-link">About Us</a></li>
+        <li><a href="#location" class="mobile-nav-link">Contact &amp; Location</a></li>
+      </ul>
+    </div>
+    <div>
+      <a href="#test-drive" class="btn btn-gold mobile-nav-link" style="width:100%;">Book a Test Drive</a>
+    </div>
+  </aside>
+
+  <!-- ========================================================================
+       HERO SECTION
+       ======================================================================== -->
+  <section class="hero" id="home">
+    <div class="hero-bg-layer" id="hero-parallax"></div>
+    <div class="hero-overlay"></div>
+    <div class="container">
+      <div class="hero-content">
+        <div class="hero-location-pill">
+          <i class="fa-solid fa-location-dot text-gold"></i>
+          <span>Flagship Gallery &bull; Jubilee Hills, Hyderabad</span>
+        </div>
+        <p class="hero-tagline">&ldquo;Where Extraordinary Meets Extraordinary.&rdquo;</p>
+        <h1 class="hero-title">DRIVE BEYOND ORDINARY.</h1>
+        <p class="hero-subtitle">
+          Discover the world&rsquo;s most extraordinary automobiles, all under one roof. From bespoke V12 hypercars to whisper-quiet flagship limousines, curated for discerning collectors in Hyderabad.
+        </p>
+        <div class="hero-cta-group">
+          <a href="#explore" class="btn btn-gold">
+            <span>Explore Collection</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </a>
+          <a href="#test-drive" class="btn btn-outline">
+            <span>Book Your Experience</span>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="scroll-indicator" aria-hidden="true">
+      <span>Scroll</span>
+      <div class="scroll-line"></div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       INTERNATIONAL AUTOMOBILE BRANDS
+       ======================================================================== -->
+  <section class="section-padding brands-section" id="brands">
+    <div class="container">
+      <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:1.5rem;">
+        <div>
+          <span class="section-eyebrow">Global Marque Portfolio</span>
+          <h2 class="section-title">International Automobile Brands</h2>
+          <p class="section-subtitle">
+            Select any iconic manufacturer from Germany, Italy, the United Kingdom, Japan, the USA, Sweden, or France to filter our curated showcase.
+          </p>
+        </div>
+        <button class="btn btn-ghost-gold" id="reset-brand-filter-btn">Show All Marquees</button>
+      </div>
+
+      <!-- Country Filter Pills -->
+      <div class="country-tabs" id="country-tabs" role="tablist" aria-label="Filter Brands by Country">
+        <button class="country-tab active" data-country="ALL">All Nations (31)</button>
+        <button class="country-tab" data-country="Germany">Germany</button>
+        <button class="country-tab" data-country="Italy">Italy</button>
+        <button class="country-tab" data-country="United Kingdom">United Kingdom</button>
+        <button class="country-tab" data-country="Japan">Japan</button>
+        <button class="country-tab" data-country="USA">USA</button>
+        <button class="country-tab" data-country="Sweden">Sweden</button>
+        <button class="country-tab" data-country="France">France</button>
+      </div>
+
+      <!-- Brands Grid -->
+      <div class="brands-grid" id="brands-grid"></div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       EXPLORE OUR CAR COLLECTION & ADVANCED FILTER ENGINE
+       ======================================================================== -->
+  <section class="section-padding" id="explore">
+    <div class="container">
+      <span class="section-eyebrow">Curated Showcase</span>
+      <h2 class="section-title">Explore Our Car Collection</h2>
+      <p class="section-subtitle">
+        Browse representative flagships across Supercars, Hypercars, Coachbuilt Luxury Sedans, Royal SUVs, Track-Bred Sports Cars, and Next-Generation Electric Vehicles.
+      </p>
+
+      <!-- Advanced Search & Filter Panel -->
+      <div class="filter-panel" aria-label="Inventory Search and Filters">
+        <div class="filter-top-row">
+          <div class="search-input-wrap">
+            <i class="fa-solid fa-magnifying-glass"></i>
+            <input type="text" id="filter-search" class="luxury-input" placeholder="Search by brand, model, engine (e.g. V12, Revuelto, Phantom, Taycan)..." aria-label="Search cars" />
+          </div>
+          <div>
+            <select id="filter-sort" class="luxury-select" aria-label="Sort inventory">
+              <option value="featured">Sort By: Featured Showcase</option>
+              <option value="price-asc">Price: Low to High (INR)</option>
+              <option value="price-desc">Price: High to Low (INR)</option>
+              <option value="newest">Newest Model Year</option>
+              <option value="hp-desc">Horsepower: Highest First</option>
+            </select>
+          </div>
+          <button class="btn btn-outline btn-sm" id="clear-all-filters">
+            <i class="fa-solid fa-rotate-left"></i>
+            <span>Clear All Filters</span>
+          </button>
+        </div>
+
+        <div class="filter-grid">
+          <div>
+            <label class="filter-label" for="filter-brand">Brand</label>
+            <select id="filter-brand" class="luxury-select"><option value="ALL">All Brands</option></select>
+          </div>
+          <div>
+            <label class="filter-label" for="filter-country">Country</label>
+            <select id="filter-country" class="luxury-select">
+              <option value="ALL">All Countries</option>
+              <option value="Germany">Germany</option>
+              <option value="Italy">Italy</option>
+              <option value="United Kingdom">United Kingdom</option>
+              <option value="Japan">Japan</option>
+              <option value="USA">USA</option>
+              <option value="Sweden">Sweden</option>
+              <option value="France">France</option>
+            </select>
+          </div>
+          <div>
+            <label class="filter-label" for="filter-body">Body Type</label>
+            <select id="filter-body" class="luxury-select">
+              <option value="ALL">All Body Types</option>
+              <option value="Supercar & Hypercar">Supercars &amp; Hypercars</option>
+              <option value="Luxury Sedan">Luxury Sedans</option>
+              <option value="Luxury SUV">Luxury SUVs</option>
+              <option value="Sports Car">Sports Cars</option>
+              <option value="Electric Vehicle">Electric Vehicles</option>
+            </select>
+          </div>
+          <div>
+            <label class="filter-label" for="filter-fuel">Fuel / Powertrain</label>
+            <select id="filter-fuel" class="luxury-select">
+              <option value="ALL">All Powertrains</option>
+              <option value="Petrol">Petrol</option>
+              <option value="Hybrid">Plug-In Hybrid / Hybrid</option>
+              <option value="Electric">Pure Electric (EV)</option>
+              <option value="Diesel">Diesel</option>
+            </select>
+          </div>
+          <div>
+            <label class="filter-label" for="filter-price">Indicative Price (INR)</label>
+            <select id="filter-price" class="luxury-select">
+              <option value="ALL">Any Price Range</option>
+              <option value="0-2">Up to ₹2.00 Cr</option>
+              <option value="2-5">₹2.00 Cr – ₹5.00 Cr</option>
+              <option value="5-10">₹5.00 Cr – ₹10.00 Cr</option>
+              <option value="10-99">Above ₹10.00 Cr</option>
+            </select>
+          </div>
+          <div>
+            <label class="filter-label" for="filter-hp">Minimum Output</label>
+            <select id="filter-hp" class="luxury-select">
+              <option value="0">Any Horsepower</option>
+              <option value="400">400+ HP</option>
+              <option value="600">600+ HP</option>
+              <option value="800">800+ HP</option>
+              <option value="1000">1,000+ HP Hypercars</option>
+            </select>
+          </div>
+          <div>
+            <label class="filter-label" for="filter-seats">Seating Capacity</label>
+            <select id="filter-seats" class="luxury-select">
+              <option value="ALL">Any Seating</option>
+              <option value="2">2 Seater</option>
+              <option value="4">4 Seater</option>
+              <option value="5">5 Seater</option>
+              <option value="7">7 Seater</option>
+            </select>
+          </div>
+          <div>
+            <label class="filter-label" for="filter-condition">Acquisition Type</label>
+            <select id="filter-condition" class="luxury-select">
+              <option value="ALL">New &amp; Curated Pre-Owned</option>
+              <option value="Brand New">Brand New Allocation</option>
+              <option value="Certified Pre-Owned">Curated Pre-Owned</option>
+            </select>
+          </div>
+        </div>
+      </div>
+
+      <!-- Inventory Count & Pricing Transparency Notice -->
+      <div class="inventory-meta-bar">
+        <div style="font-size:0.92rem; color:var(--text-secondary);">
+          Displaying <strong class="text-gold" id="inventory-count">0</strong> extraordinary automobiles
+        </div>
+        <div class="pricing-disclaimer-note">
+          <i class="fa-solid fa-circle-info text-gold" style="margin-right:6px;"></i>
+          <strong>Transparency Note:</strong> All INR figures shown are illustrative ex-showroom / import estimates; availability reflects sample showroom catalog status pending bespoke allocation confirmation.
+        </div>
+      </div>
+
+      <!-- Dynamic Car Cards Container -->
+      <div class="cars-grid" id="cars-grid"></div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       EXCLUSIVE CURATED COLLECTIONS
+       ======================================================================== -->
+  <section class="section-padding" id="collections" style="background: var(--bg-charcoal); border-top:1px solid var(--border-subtle);">
+    <div class="container">
+      <span class="section-eyebrow">Bespoke Curation</span>
+      <h2 class="section-title">Exclusive Collections</h2>
+      <p class="section-subtitle">
+        Six signature themes curated by our automotive specialists. Click any collection to filter the showroom showcase immediately.
+      </p>
+
+      <div class="collections-grid" id="collections-grid"></div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CAR COMPARISON FEATURE
+       ======================================================================== -->
+  <section class="section-padding comparison-section" id="compare">
+    <div class="container">
+      <span class="section-eyebrow">Precision Benchmarking</span>
+      <h2 class="section-title">Side-by-Side Vehicle Comparison</h2>
+      <p class="section-subtitle">
+        Select up to three automobiles to compare powertrains, acceleration, dimensions, and luxury specifications side by side. Leading metrics are highlighted in champagne gold.
+      </p>
+
+      <div class="compare-selectors">
+        <div>
+          <label class="filter-label" for="compare-slot-0">Vehicle 01</label>
+          <select id="compare-slot-0" class="luxury-select compare-select" data-slot="0"></select>
+        </div>
+        <div>
+          <label class="filter-label" for="compare-slot-1">Vehicle 02</label>
+          <select id="compare-slot-1" class="luxury-select compare-select" data-slot="1"></select>
+        </div>
+        <div>
+          <label class="filter-label" for="compare-slot-2">Vehicle 03 (Optional)</label>
+          <select id="compare-slot-2" class="luxury-select compare-select" data-slot="2"></select>
+        </div>
+      </div>
+
+      <div class="compare-table-wrapper" id="compare-table-container"></div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CONCIERGE SERVICES & OWNERSHIP PROGRAMS
+       ======================================================================== -->
+  <section class="section-padding" id="services">
+    <div class="container">
+      <span class="section-eyebrow">Bespoke Ownership</span>
+      <h2 class="section-title">Concierge &amp; Automotive Services</h2>
+      <p class="section-subtitle">
+        Tailored acquisition, protection, and customization services designed around every stage of luxury vehicle ownership in Hyderabad and across India.
+      </p>
+
+      <div class="services-grid">
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-crown"></i></div>
+          <h3 class="font-serif" style="font-size:1.35rem; margin-bottom:0.5rem;">Exclusive Showroom Privileges</h3>
+          <p style="font-size:0.88rem; color:var(--text-secondary);">Private after-hours gallery viewings and priority allocation consultations at our Jubilee Hills lounge.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-building-columns"></i></div>
+          <h3 class="font-serif" style="font-size:1.35rem; margin-bottom:0.5rem;">Premium Finance Assistance</h3>
+          <p style="font-size:0.88rem; color:var(--text-secondary);">Structured automotive financing and lease advisory tailored for high-net-worth individuals and family offices.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-right-left"></i></div>
+          <h3 class="font-serif" style="font-size:1.35rem; margin-bottom:0.5rem;">Exchange &amp; Upgrade Programs</h3>
+          <p style="font-size:0.88rem; color:var(--text-secondary);">Transparent valuation and seamless trade-in pathways for upgrading your current luxury or performance automobile.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-briefcase"></i></div>
+          <h3 class="font-serif" style="font-size:1.35rem; margin-bottom:0.5rem;">Corporate Vehicle Purchases</h3>
+          <p style="font-size:0.88rem; color:var(--text-secondary);">Dedicated executive fleet procurement, documentation management, and depreciation-optimized structuring.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-earth-europe"></i></div>
+          <h3 class="font-serif" style="font-size:1.35rem; margin-bottom:0.5rem;">Global Luxury Car Sourcing</h3>
+          <p style="font-size:0.88rem; color:var(--text-secondary);">Bespoke international sourcing of rare right-hand-drive builds, collector editions, and homologated imports.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-certificate"></i></div>
+          <h3 class="font-serif" style="font-size:1.35rem; margin-bottom:0.5rem;">Pre-Owned Luxury Assistance</h3>
+          <p style="font-size:0.88rem; color:var(--text-secondary);">Multi-point mechanical diagnostics, provenance verification, and service history validation for pre-owned cars.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-shield-halved"></i></div>
+          <h3 class="font-serif" style="font-size:1.35rem; margin-bottom:0.5rem;">Comprehensive Insurance Assistance</h3>
+          <p style="font-size:0.88rem; color:var(--text-secondary);">Zero-depreciation, return-to-invoice, and high-value supercar coverage advisory with dedicated claims support.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-palette"></i></div>
+          <h3 class="font-serif" style="font-size:1.35rem; margin-bottom:0.5rem;">Bespoke Vehicle Customization</h3>
+          <p style="font-size:0.88rem; color:var(--text-secondary);">Atelier configuration guidance for exterior paint-to-sample finishes, carbon aero packages, and custom interiors.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-sparkles"></i></div>
+          <h3 class="font-serif" style="font-size:1.35rem; margin-bottom:0.5rem;">Ceramic Coating &amp; Detailing</h3>
+          <p style="font-size:0.88rem; color:var(--text-secondary);">Self-healing paint protection films (PPF), multi-stage paint correction, and hydrophobic ceramic preservation.</p>
+        </div>
+        <div class="service-card">
+          <div class="service-icon"><i class="fa-solid fa-truck-ramp-box"></i></div>
+          <h3 class="font-serif" style="font-size:1.35rem; margin-bottom:0.5rem;">Enclosed Doorstep Delivery</h3>
+          <p style="font-size:0.88rem; color:var(--text-secondary);">Climate-conscious flatbed and enclosed carrier delivery directly to your residence anywhere in Telangana or India.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       ABOUT ELITE MOTORS
+       ======================================================================== -->
+  <section class="section-padding" id="about" style="background: var(--bg-charcoal); border-top:1px solid var(--border-subtle);">
+    <div class="container split-layout">
+      <div>
+        <span class="section-eyebrow">Our Philosophy</span>
+        <h2 class="section-title">MORE THAN A SHOWROOM. A WORLD OF AUTOMOTIVE PASSION.</h2>
+        <p style="font-size:1.05rem; color:var(--text-secondary); margin-bottom:1.75rem; font-weight:300;">
+          At Elite Motors, we bring the world&rsquo;s finest automobiles closer to Hyderabad. From timeless luxury to breathtaking performance, explore a carefully curated collection designed for those who appreciate extraordinary engineering.
+        </p>
+
+        <div style="display:grid; grid-template-columns:1fr 1fr; gap:1.25rem; margin-top:2rem;">
+          <div style="border-left:2px solid var(--gold-primary); padding-left:1rem;">
+            <h4 class="font-serif" style="font-size:1.25rem; color:var(--gold-champagne);">Customer-First Approach</h4>
+            <p style="font-size:0.84rem; color:var(--text-secondary); margin-top:0.25rem;">Unrushed, private consultations tailored exclusively to your driving aspirations.</p>
+          </div>
+          <div style="border-left:2px solid var(--gold-primary); padding-left:1rem;">
+            <h4 class="font-serif" style="font-size:1.25rem; color:var(--gold-champagne);">Personalized Assistance</h4>
+            <p style="font-size:0.84rem; color:var(--text-secondary); margin-top:0.25rem;">Dedicated marque specialists guiding bespoke builds, specs, and delivery logistics.</p>
+          </div>
+          <div style="border-left:2px solid var(--gold-primary); padding-left:1rem;">
+            <h4 class="font-serif" style="font-size:1.25rem; color:var(--gold-champagne);">Premium Buying Experience</h4>
+            <p style="font-size:0.84rem; color:var(--text-secondary); margin-top:0.25rem;">An architectural gallery atmosphere worthy of the world&rsquo;s rarest coachbuilders.</p>
+          </div>
+          <div style="border-left:2px solid var(--gold-primary); padding-left:1rem;">
+            <h4 class="font-serif" style="font-size:1.25rem; color:var(--gold-champagne);">Transparent Information</h4>
+            <p style="font-size:0.84rem; color:var(--text-secondary); margin-top:0.25rem;">Clear technical specifications, documented provenance, and honest advisory.</p>
+          </div>
+        </div>
+      </div>
+
+      <div style="position:relative;">
+        <img
+          src="https://images.unsplash.com/photo-1618843479313-40f8afb4b4d8?auto=format&fit=crop&w=1200&q=85"
+          alt="Luxury Automotive Gallery Atmosphere"
+          loading="lazy"
+          style="border-radius:var(--radius-lg); border:1px solid var(--border-gold); box-shadow:var(--shadow-luxury); width:100%; height:470px; object-fit:cover;"
+          onerror="this.src='https://placehold.co/900x600/14161c/d4af37?text=ELITE+MOTORS+GALLERY'"
+        />
+        <div style="position:absolute; bottom:-1.25rem; left:1.5rem; right:1.5rem; background:rgba(12,13,17,0.92); backdrop-filter:blur(12px); border:1px solid var(--border-gold); padding:1.15rem 1.5rem; border-radius:var(--radius-md);">
+          <p class="font-serif" style="font-size:1.15rem; font-style:italic; color:var(--gold-champagne);">
+            &ldquo;The World&rsquo;s Finest Machines. One Extraordinary Destination.&rdquo;
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       BOOK A TEST DRIVE & WHATSAPP CONCIERGE
+       ======================================================================== -->
+  <section class="section-padding" id="test-drive">
+    <div class="container split-layout">
+      <div>
+        <span class="section-eyebrow">Private Driving Experience</span>
+        <h2 class="section-title">Book a Test Drive</h2>
+        <p class="section-subtitle" style="margin-bottom:1.5rem;">
+          Experience the visceral acoustics, steering precision, and handcrafted cabin of your chosen automobile in Jubilee Hills, Hyderabad.
+        </p>
+        <p style="font-size:0.9rem; color:var(--text-secondary); margin-bottom:2rem;">
+          Prefer instant messaging with our concierge desk? Connect directly via WhatsApp to coordinate model availability and private viewing windows.
+        </p>
+        <a id="whatsapp-direct-btn" href="https://wa.me/919000000000?text=Hello%20Elite%20Motors%20Jubilee%20Hills%2C%20I%20would%20like%20to%20enquire%20about%20a%20private%20viewing%20and%20test%20drive." target="_blank" rel="noopener noreferrer" class="btn btn-outline">
+          <i class="fa-brands fa-whatsapp" style="color:#25D366; font-size:1.15rem;"></i>
+          <span>Enquire via WhatsApp Concierge</span>
+        </a>
+      </div>
+
+      <div class="form-card">
+        <h3 class="font-serif" style="font-size:1.75rem; margin-bottom:0.35rem;">Request Your Appointment</h3>
+        <p style="font-size:0.82rem; color:var(--text-secondary); margin-bottom:1.5rem;">
+          Complete your preferences below. Note: This form is an interactive frontend demonstration.
+        </p>
+
+        <form id="test-drive-form" novalidate>
+          <div class="form-row-2">
+            <div>
+              <label class="filter-label" for="td-name">Full Name *</label>
+              <input type="text" id="td-name" class="luxury-input" placeholder="e.g. Vikramaditya Rao" required />
+            </div>
+            <div>
+              <label class="filter-label" for="td-phone">Mobile Number *</label>
+              <input type="tel" id="td-phone" class="luxury-input" placeholder="+91 98XXX XXXXX" required />
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="filter-label" for="td-email">Email Address *</label>
+            <input type="email" id="td-email" class="luxury-input" placeholder="name@domain.com" required />
+          </div>
+
+          <div class="form-row-2">
+            <div>
+              <label class="filter-label" for="td-brand">Preferred Car Brand *</label>
+              <select id="td-brand" class="luxury-select" required>
+                <option value="">Select Brand</option>
+              </select>
+            </div>
+            <div>
+              <label class="filter-label" for="td-model">Preferred Car Model *</label>
+              <select id="td-model" class="luxury-select" required>
+                <option value="">Select Model from Inventory</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-row-2">
+            <div>
+              <label class="filter-label" for="td-date">Preferred Date *</label>
+              <input type="date" id="td-date" class="luxury-input" required />
+            </div>
+            <div>
+              <label class="filter-label" for="td-time">Preferred Time *</label>
+              <select id="td-time" class="luxury-select" required>
+                <option value="10:30 AM">10:30 AM (Morning Session)</option>
+                <option value="01:00 PM">01:00 PM (Afternoon Session)</option>
+                <option value="04:00 PM">04:00 PM (Golden Hour Drive)</option>
+                <option value="06:30 PM">06:30 PM (Private Lounge Preview)</option>
+              </select>
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label class="filter-label" for="td-notes">Additional Requirements</label>
+            <textarea id="td-notes" rows="3" class="luxury-input" placeholder="Specify bespoke trim interests, trade-in vehicle details, or doorstep chauffeur preference..."></textarea>
+          </div>
+
+          <button type="submit" class="btn btn-gold" style="width:100%;">
+            <span>Submit Test Drive Request</span>
+            <i class="fa-solid fa-arrow-right"></i>
+          </button>
+        </form>
+
+        <div id="td-confirmation" class="demo-notice-box" style="display:none;" role="status"></div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       CUSTOMER TESTIMONIALS (CLEARLY LABELED DEMO CONTENT)
+       ======================================================================== -->
+  <section class="section-padding" style="background: var(--bg-charcoal); border-top:1px solid var(--border-subtle);">
+    <div class="container">
+      <div style="display:flex; flex-wrap:wrap; justify-content:space-between; align-items:flex-end; gap:1rem;">
+        <div>
+          <span class="section-eyebrow">Client Impressions</span>
+          <h2 class="section-title">Voices of Connoisseurs</h2>
+        </div>
+        <span class="pill-badge pill-gold">Sample Demo Testimonials</span>
+      </div>
+
+      <div class="testimonials-grid">
+        <article class="testimonial-card">
+          <div class="text-gold" style="margin-bottom:0.85rem;" aria-label="5 out of 5 stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p style="font-size:0.95rem; color:var(--text-primary); font-style:italic; margin-bottom:1.25rem;">
+            &ldquo;The side-by-side specification consultation and serene atmosphere in Jubilee Hills made selecting our grand tourer an effortless experience.&rdquo;
+          </p>
+          <div style="font-weight:600; font-size:0.9rem;">[Sample Client Name &mdash; Hyderabad]</div>
+          <div style="font-size:0.75rem; color:var(--gold-champagne); text-transform:uppercase; letter-spacing:0.12em;">Vehicle: Aston Martin DB12 &bull; Demo Review</div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="text-gold" style="margin-bottom:0.85rem;" aria-label="5 out of 5 stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p style="font-size:0.95rem; color:var(--text-primary); font-style:italic; margin-bottom:1.25rem;">
+            &ldquo;Having flagship luxury SUVs and electric grand tourers curated under one roof allowed our family to compare every detail in a single private session.&rdquo;
+          </p>
+          <div style="font-weight:600; font-size:0.9rem;">[Sample Client Name &mdash; Banjara Hills]</div>
+          <div style="font-size:0.75rem; color:var(--gold-champagne); text-transform:uppercase; letter-spacing:0.12em;">Vehicle: Range Rover Autobiography &bull; Demo Review</div>
+        </article>
+
+        <article class="testimonial-card">
+          <div class="text-gold" style="margin-bottom:0.85rem;" aria-label="5 out of 5 stars">
+            <i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i>
+          </div>
+          <p style="font-size:0.95rem; color:var(--text-primary); font-style:italic; margin-bottom:1.25rem;">
+            &ldquo;Transparent technical documentation and bespoke ceramic protection prior to enclosed delivery exceeded every expectation.&rdquo;
+          </p>
+          <div style="font-weight:600; font-size:0.9rem;">[Sample Client Name &mdash; Jubilee Hills]</div>
+          <div style="font-size:0.75rem; color:var(--gold-champagne); text-transform:uppercase; letter-spacing:0.12em;">Vehicle: Porsche 911 GT3 RS &bull; Demo Review</div>
+        </article>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       NEWS & AUTOMOTIVE JOURNAL
+       ======================================================================== -->
+  <section class="section-padding" id="journal">
+    <div class="container">
+      <span class="section-eyebrow">Editorial &amp; Insights</span>
+      <h2 class="section-title">The Elite Automotive Journal</h2>
+      <p class="section-subtitle">
+        Curated perspectives on hybrid V12 engineering, electric luxury flagships, and collector car craftsmanship.
+      </p>
+
+      <div class="journal-grid" id="journal-grid"></div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       JUBILEE HILLS SHOWROOM LOCATION
+       ======================================================================== -->
+  <section class="section-padding" id="location" style="background: var(--bg-charcoal); border-top:1px solid var(--border-subtle);">
+    <div class="container split-layout">
+      <div>
+        <span class="section-eyebrow">Flagship Destination</span>
+        <h2 class="section-title">Jubilee Hills Showroom</h2>
+        <p class="section-subtitle" style="margin-bottom:2rem;">
+          Located in the prestigious heart of Jubilee Hills, Hyderabad, Telangana, India. Private valet parking and appointment-only collector lounges available.
+        </p>
+
+        <div style="display:flex; flex-direction:column; gap:1.15rem; margin-bottom:2rem;">
+          <div style="display:flex; gap:1rem; align-items:flex-start;">
+            <i class="fa-solid fa-location-dot text-gold" style="margin-top:5px;"></i>
+            <div>
+              <div style="font-weight:600;">Showroom Vicinity</div>
+              <div style="color:var(--text-secondary); font-size:0.9rem;">Jubilee Hills, Hyderabad, Telangana, India (Exact street address configurable upon dealership onboarding)</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:1rem; align-items:flex-start;">
+            <i class="fa-solid fa-clock text-gold" style="margin-top:5px;"></i>
+            <div>
+              <div style="font-weight:600;">Gallery Hours (Placeholder)</div>
+              <div style="color:var(--text-secondary); font-size:0.9rem;">Monday &ndash; Sunday: 10:00 AM &ndash; 8:30 PM IST (Private evening viewings by prior appointment)</div>
+            </div>
+          </div>
+          <div style="display:flex; gap:1rem; align-items:flex-start;">
+            <i class="fa-solid fa-phone text-gold" style="margin-top:5px;"></i>
+            <div>
+              <div style="font-weight:600;">Concierge Desk (Placeholder)</div>
+              <div style="color:var(--text-secondary); font-size:0.9rem;">+91 (040) 0000-0000 &bull; concierge@elitemotors-hyderabad.example</div>
+            </div>
+          </div>
+        </div>
+
+        <div style="display:flex; flex-wrap:wrap; gap:0.85rem;">
+          <a href="https://maps.google.com/?q=Jubilee+Hills,+Hyderabad,+Telangana,+India" target="_blank" rel="noopener noreferrer" class="btn btn-gold btn-sm">
+            <i class="fa-solid fa-diamond-turn-right"></i>
+            <span>Get Directions</span>
+          </a>
+          <a href="#test-drive" class="btn btn-outline btn-sm">
+            <span>Schedule Showroom Visit</span>
+          </a>
+          <a href="https://wa.me/919000000000?text=Hello%20Elite%20Motors%20Jubilee%20Hills%2C%20I%20would%20like%20to%20visit%20the%20showroom." target="_blank" rel="noopener noreferrer" class="btn btn-outline btn-sm">
+            <i class="fa-brands fa-whatsapp" style="color:#25D366;"></i>
+            <span>WhatsApp</span>
+          </a>
+        </div>
+      </div>
+
+      <div style="border-radius:var(--radius-lg); overflow:hidden; border:1px solid var(--border-gold); height:400px; box-shadow:var(--shadow-luxury);">
+        <iframe
+          title="Jubilee Hills Hyderabad Map"
+          src="https://www.google.com/maps?q=Jubilee+Hills,+Hyderabad,+Telangana,+India&output=embed"
+          width="100%"
+          height="100%"
+          style="border:0; filter: invert(90%) hue-rotate(180deg) contrast(92%);"
+          loading="lazy"
+          referrerpolicy="no-referrer-when-downgrade">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- ========================================================================
+       LARGE PREMIUM FOOTER
+       ======================================================================== -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div>
+          <div class="brand-logo" style="margin-bottom:1.15rem;">
+            <div class="brand-emblem">EM</div>
+            <div class="brand-text-wrap">
+              <span class="brand-name">ELITE MOTORS</span>
+              <span class="brand-sub">The World of Automotive Excellence</span>
+            </div>
+          </div>
+          <p style="font-size:0.88rem; color:var(--text-secondary); margin-bottom:1.35rem; max-width:340px;">
+            &ldquo;THE WORLD&rsquo;S FINEST MACHINES. ONE EXTRAORDINARY DESTINATION.&rdquo;<br />
+            Jubilee Hills, Hyderabad, Telangana, India.
+          </p>
+          <div style="display:flex; gap:0.75rem;">
+            <a href="#location" class="nav-icon-btn" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#location" class="nav-icon-btn" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+            <a href="#location" class="nav-icon-btn" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+            <a href="https://wa.me/919000000000" target="_blank" rel="noopener noreferrer" class="nav-icon-btn" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+          </div>
+        </div>
+
+        <div>
+          <h4 class="font-serif" style="font-size:1.25rem; color:var(--gold-champagne); margin-bottom:1rem;">Navigation</h4>
+          <ul class="footer-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#explore">Explore Car Collection</a></li>
+            <li><a href="#brands">International Brands</a></li>
+            <li><a href="#compare">Compare Vehicles</a></li>
+            <li><a href="#collections">Special Collections</a></li>
+            <li><a href="#services">Concierge Services</a></li>
+            <li><a href="#test-drive">Book a Test Drive</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-serif" style="font-size:1.25rem; color:var(--gold-champagne); margin-bottom:1rem;">Featured Marques</h4>
+          <ul class="footer-links">
+            <li><a href="#explore" data-footer-brand="Rolls-Royce">Rolls-Royce Motor Cars</a></li>
+            <li><a href="#explore" data-footer-brand="Lamborghini">Automobili Lamborghini</a></li>
+            <li><a href="#explore" data-footer-brand="Ferrari">Ferrari Maranello</a></li>
+            <li><a href="#explore" data-footer-brand="Porsche">Porsche Stuttgart</a></li>
+            <li><a href="#explore" data-footer-brand="Mercedes-Maybach">Mercedes-Maybach</a></li>
+            <li><a href="#explore" data-footer-brand="Bentley">Bentley Motors</a></li>
+            <li><a href="#explore" data-footer-brand="Bugatti">Bugatti Automobiles</a></li>
+          </ul>
+        </div>
+
+        <div>
+          <h4 class="font-serif" style="font-size:1.25rem; color:var(--gold-champagne); margin-bottom:1rem;">Private Dispatch</h4>
+          <p style="font-size:0.84rem; color:var(--text-secondary); margin-bottom:1rem;">
+            Receive curated updates on newly arrived collector builds and private previews in Hyderabad (Frontend Demo).
+          </p>
+          <form id="newsletter-form" style="display:flex; gap:0.5rem;">
+            <input type="email" id="newsletter-email" class="luxury-input" placeholder="Enter your email" required aria-label="Newsletter email" />
+            <button type="submit" class="btn btn-gold btn-sm">Join</button>
+          </form>
+        </div>
+      </div>
+
+      <div style="border-top:1px solid var(--border-subtle); padding-top:1.75rem; display:flex; flex-wrap:wrap; justify-content:space-between; gap:1rem; font-size:0.78rem; color:var(--text-muted);">
+        <div>&copy; <span id="current-year">2026</span> ELITE MOTORS &bull; Jubilee Hills, Hyderabad, India. All Rights Reserved.</div>
+        <div style="display:flex; gap:1.5rem;">
+          <a href="#privacy" class="policy-trigger" data-policy="Privacy Policy">Privacy Policy</a>
+          <a href="#terms" class="policy-trigger" data-policy="Terms & Conditions">Terms &amp; Conditions</a>
+          <span>Illustrative Pricing &amp; Catalog Demo</span>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <!-- BACK TO TOP BUTTON -->
+  <button id="back-to-top" aria-label="Back to Top" title="Back to Top">
+    <i class="fa-solid fa-arrow-up"></i>
+  </button>
+
+  <!-- ========================================================================
+       MODAL 1: INDIVIDUAL CAR DETAIL VIEWER
+       ======================================================================== -->
+  <div class="modal-backdrop" id="car-detail-modal" role="dialog" aria-modal="true" aria-labelledby="modal-car-title">
+    <div class="modal-dialog">
+      <button class="modal-close-btn" id="close-car-modal" aria-label="Close Vehicle Details">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div id="car-modal-body" style="padding: 2rem;"></div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL 2: SAVED WISHLIST DRAWER / MODAL
+       ======================================================================== -->
+  <div class="modal-backdrop" id="wishlist-modal" role="dialog" aria-modal="true" aria-labelledby="wishlist-modal-title">
+    <div class="modal-dialog" style="max-width: 760px;">
+      <button class="modal-close-btn" id="close-wishlist-modal" aria-label="Close Wishlist">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div style="padding: 2rem;">
+        <span class="section-eyebrow">Saved Collection</span>
+        <h3 id="wishlist-modal-title" class="font-serif" style="font-size:2rem; margin-bottom:1.25rem;">Your Curated Wishlist</h3>
+        <div id="wishlist-items-container"></div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       MODAL 3: JOURNAL ARTICLE & POLICY READER
+       ======================================================================== -->
+  <div class="modal-backdrop" id="reader-modal" role="dialog" aria-modal="true" aria-labelledby="reader-modal-title">
+    <div class="modal-dialog" style="max-width: 780px;">
+      <button class="modal-close-btn" id="close-reader-modal" aria-label="Close Reader">
+        <i class="fa-solid fa-xmark"></i>
+      </button>
+      <div id="reader-modal-body" style="padding: 2.25rem;"></div>
+    </div>
+  </div>
+
+  <!-- ========================================================================
+       APPLICATION LOGIC (DATA, STATE, FILTERING, COMPARISON, MODALS)
+       ======================================================================== -->
+  
+  <script src="script.js"></script>
+</body>
+</html>
