@@ -1,0 +1,815 @@
+<!DOCTYPE html>
+<html lang="en" class="scroll-smooth">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saffron & Stone | Modern Artisanal Dining</title>
+    <!-- Tailwind CSS -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <!-- Google Fonts: Playfair Display for headings & Plus Jakarta Sans for clean UI/body -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Font Awesome for crisp icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    
+    <!-- Tailwind Configuration for Custom Fonts & Brand Colors -->
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    fontFamily: {
+                        sans: ['"Plus Jakarta Sans"', 'sans-serif'],
+                        serif: ['"Playfair Display"', 'serif'],
+                    },
+                    colors: {
+                        cream: '#FAF7F2',
+                        charcoal: '#1C1917',
+                        terracotta: '#C2410C',
+                        terracottaDark: '#9A3412',
+                        gold: '#D97706',
+                        sage: '#4D7C0F'
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-cream text-charcoal antialiased selection:bg-terracotta selection:text-white">
+
+    <!-- ================= NAVIGATION BAR ================= -->
+    <header class="sticky top-0 z-50 bg-cream/95 backdrop-blur-md border-b border-stone-200/80 transition-all">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-20">
+                <!-- Brand Logo -->
+                <a href="#" class="flex items-center space-x-2 group">
+                    <span class="w-10 h-10 rounded-full bg-terracotta text-white flex items-center justify-center font-serif text-xl font-bold shadow-md group-hover:scale-105 transition-transform">S</span>
+                    <span class="font-serif text-2xl font-bold tracking-tight text-charcoal">Saffron <span class="text-terracotta italic">&</span> Stone</span>
+                </a>
+
+                <!-- Desktop Navigation Links -->
+                <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-stone-700">
+                    <a href="#hero" class="hover:text-terracotta transition-colors">Home</a>
+                    <a href="#menu" class="hover:text-terracotta transition-colors">Our Menu</a>
+                    <a href="#offers" class="hover:text-terracotta transition-colors">Special Offers</a>
+                    <a href="#reviews" class="hover:text-terracotta transition-colors">Reviews</a>
+                    <a href="#contact" class="hover:text-terracotta transition-colors">Location & Contact</a>
+                </nav>
+
+                <!-- CTA Button & Mobile Menu Toggle -->
+                <div class="flex items-center space-x-4">
+                    <a href="#contact" class="hidden sm:inline-flex items-center px-5 py-2.5 rounded-full bg-charcoal text-white text-sm font-semibold hover:bg-terracotta transition-colors shadow-sm">
+                        Reserve a Table
+                    </a>
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-btn" aria-label="Toggle Menu" class="md:hidden p-2.5 rounded-xl text-charcoal hover:bg-stone-200/70 focus:outline-none">
+                        <i class="fa-solid fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+        </div>
+
+        <!-- Mobile Navigation Dropdown -->
+        <div id="mobile-menu" class="hidden md:hidden bg-cream border-b border-stone-200 px-4 pt-2 pb-6 space-y-2 shadow-lg">
+            <a href="#hero" class="block px-4 py-3 rounded-xl text-base font-medium text-stone-800 hover:bg-stone-200/60">Home</a>
+            <a href="#menu" class="block px-4 py-3 rounded-xl text-base font-medium text-stone-800 hover:bg-stone-200/60">Our Menu</a>
+            <a href="#offers" class="block px-4 py-3 rounded-xl text-base font-medium text-stone-800 hover:bg-stone-200/60">Special Offers</a>
+            <a href="#reviews" class="block px-4 py-3 rounded-xl text-base font-medium text-stone-800 hover:bg-stone-200/60">Reviews</a>
+            <a href="#contact" class="block px-4 py-3 rounded-xl text-base font-medium text-stone-800 hover:bg-stone-200/60">Location & Contact</a>
+            <div class="pt-2">
+                <a href="#contact" class="block w-full text-center px-5 py-3 rounded-full bg-terracotta text-white font-semibold shadow">
+                    Reserve a Table
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- ================= HERO SECTION ================= -->
+    <section id="hero" class="relative overflow-hidden pt-10 pb-20 lg:py-28">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+                
+                <!-- Hero Text Content -->
+                <div class="lg:col-span-6 space-y-6 text-center lg:text-left">
+                    <div class="inline-flex items-center space-x-2 px-4 py-1.5 rounded-full bg-orange-100/90 text-terracotta text-xs font-bold uppercase tracking-wider">
+                        <i class="fa-solid fa-fire-flame-curved"></i>
+                        <span>Wood-Fired & Farm-to-Table</span>
+                    </div>
+                    <h1 class="font-serif text-4xl sm:text-5xl lg:text-6xl font-bold text-charcoal leading-tight">
+                        Where Fire Meets <span class="text-terracotta italic">Artisanal</span> Flavor.
+                    </h1>
+                    <p class="text-base sm:text-lg text-stone-600 max-w-xl mx-auto lg:mx-0 leading-relaxed">
+                        Experience locally sourced ingredients transformed over open oak flames. Hand-rolled pastas, charred seasonal harvests, and crafted botanical cocktails in an intimate setting.
+                    </p>
+                    <div class="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4 pt-2">
+                        <a href="#menu" class="w-full sm:w-auto px-8 py-4 rounded-full bg-terracotta text-white font-semibold text-base hover:bg-terracottaDark transition-all shadow-lg shadow-terracotta/25 text-center">
+                            Explore Full Menu
+                        </a>
+                        <a href="#offers" class="w-full sm:w-auto px-8 py-4 rounded-full bg-white text-charcoal border border-stone-300 font-semibold text-base hover:border-charcoal transition-all text-center">
+                            View Seasonal Specials
+                        </a>
+                    </div>
+                    
+                    <!-- Quick Highlights -->
+                    <div class="grid grid-cols-3 gap-4 pt-6 border-t border-stone-200/90 max-w-md mx-auto lg:mx-0">
+                        <div>
+                            <p class="font-serif text-2xl font-bold text-charcoal">4.9 ★</p>
+                            <p class="text-xs text-stone-500">1,200+ Reviews</p>
+                        </div>
+                        <div>
+                            <p class="font-serif text-2xl font-bold text-charcoal">100%</p>
+                            <p class="text-xs text-stone-500">Organic Produce</p>
+                        </div>
+                        <div>
+                            <p class="font-serif text-2xl font-bold text-charcoal">12 PM</p>
+                            <p class="text-xs text-stone-500">Open Daily</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Hero Feature Image -->
+                <div class="lg:col-span-6 relative">
+                    <div class="relative rounded-3xl overflow-hidden shadow-2xl aspect-[4/3] bg-stone-200">
+                        <img 
+                            src="https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=1200&q=80" 
+                            alt="Signature wood-fired dish served on rustic stoneware" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/800x600/292524/FAF7F2?text=Signature+Wood-Fired+Feast';"
+                            class="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
+                        >
+                        <!-- Floating Dish Badge -->
+                        <div class="absolute bottom-4 left-4 right-4 sm:right-auto sm:max-w-xs bg-white/95 backdrop-blur-md p-4 rounded-2xl shadow-lg border border-stone-100">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-10 h-10 rounded-full bg-amber-100 text-gold flex items-center justify-center shrink-0">
+                                    <i class="fa-solid fa-award text-lg"></i>
+                                </div>
+                                <div>
+                                    <p class="text-xs font-bold uppercase tracking-wider text-terracotta">Chef's Signature</p>
+                                    <p class="font-serif font-bold text-sm text-charcoal">Smoked Herb Ribeye & Truffle Jus</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOD MENU SECTION ================= -->
+    <section id="menu" class="py-20 bg-white border-y border-stone-200/70">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            
+            <!-- Section Header -->
+            <div class="text-center max-w-2xl mx-auto mb-12 space-y-3">
+                <span class="text-terracotta font-bold text-xs uppercase tracking-widest">Curated Culinary Selection</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal">Our Seasonal Menu</h2>
+                <p class="text-stone-600 text-sm sm:text-base">
+                    Crafted daily using heirloom harvests, sustainable seafood, and house-milled grains.
+                </p>
+            </div>
+
+            <!-- Interactive Category Filter Tabs -->
+            <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12" id="menu-filters">
+                <button data-category="all" class="filter-btn active px-5 py-2.5 rounded-full text-sm font-semibold bg-charcoal text-white transition-all shadow-sm">
+                    All Dishes
+                </button>
+                <button data-category="starters" class="filter-btn px-5 py-2.5 rounded-full text-sm font-semibold bg-stone-100 text-stone-700 hover:bg-stone-200 transition-all">
+                    Starters & Small Plates
+                </button>
+                <button data-category="mains" class="filter-btn px-5 py-2.5 rounded-full text-sm font-semibold bg-stone-100 text-stone-700 hover:bg-stone-200 transition-all">
+                    Wood-Fired Mains
+                </button>
+                <button data-category="desserts" class="filter-btn px-5 py-2.5 rounded-full text-sm font-semibold bg-stone-100 text-stone-700 hover:bg-stone-200 transition-all">
+                    Artisanal Desserts
+                </button>
+                <button data-category="drinks" class="filter-btn px-5 py-2.5 rounded-full text-sm font-semibold bg-stone-100 text-stone-700 hover:bg-stone-200 transition-all">
+                    Craft Drinks
+                </button>
+            </div>
+
+            <!-- Menu Grid -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8" id="menu-grid">
+                
+                <!-- Menu Item 1: Starter -->
+                <article data-category="starters" class="menu-card group bg-cream rounded-2xl overflow-hidden border border-stone-200/80 hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="relative h-52 overflow-hidden bg-stone-200">
+                        <img 
+                            src="https://images.unsplash.com/photo-1572695157366-5e585ab2b69f?auto=format&fit=crop&w=800&q=80" 
+                            alt="Charred Sourdough & Whipped Ricotta" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x400/E7E5E4/1C1917?text=Whipped+Ricotta+Bruschetta';"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        >
+                        <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/90 backdrop-blur text-xs font-bold text-sage">Vegetarian</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start gap-2 mb-2">
+                                <h3 class="font-serif text-xl font-bold text-charcoal">Heirloom Tomato & Whipped Ricotta</h3>
+                                <span class="font-bold text-lg text-terracotta">$14</span>
+                            </div>
+                            <p class="text-stone-600 text-sm leading-relaxed">
+                                House-baked rosemary focaccia topped with lemon-thyme ricotta, blistered heirloom tomatoes, and aged balsamic glaze.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-stone-200/70 flex items-center justify-between text-xs text-stone-500">
+                            <span><i class="fa-solid fa-leaf text-sage mr-1"></i> Farm Fresh</span>
+                            <span>280 kcal</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Menu Item 2: Starter -->
+                <article data-category="starters" class="menu-card group bg-cream rounded-2xl overflow-hidden border border-stone-200/80 hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="relative h-52 overflow-hidden bg-stone-200">
+                        <img 
+                            src="https://images.unsplash.com/photo-1559737558-2f5a35f4523b?auto=format&fit=crop&w=800&q=80" 
+                            alt="Crispy Calamari with Saffron Aioli" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x400/E7E5E4/1C1917?text=Crispy+Calamari';"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        >
+                        <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-terracotta text-white text-xs font-bold">Popular</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start gap-2 mb-2">
+                                <h3 class="font-serif text-xl font-bold text-charcoal">Saffron Crusted Calamari</h3>
+                                <span class="font-bold text-lg text-terracotta">$16</span>
+                            </div>
+                            <p class="text-stone-600 text-sm leading-relaxed">
+                                Flash-fried coastal squid dusted with smoked paprika and sea salt, paired with charred lemon and roasted garlic saffron aioli.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-stone-200/70 flex items-center justify-between text-xs text-stone-500">
+                            <span><i class="fa-solid fa-pepper-hot text-terracotta mr-1"></i> Mild Spice</span>
+                            <span>340 kcal</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Menu Item 3: Main -->
+                <article data-category="mains" class="menu-card group bg-cream rounded-2xl overflow-hidden border border-stone-200/80 hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="relative h-52 overflow-hidden bg-stone-200">
+                        <img 
+                            src="https://images.unsplash.com/photo-1600891964092-4316c288032e?auto=format&fit=crop&w=800&q=80" 
+                            alt="Wood-Fired Ribeye Steak" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x400/E7E5E4/1C1917?text=Wood-Fired+Ribeye';"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        >
+                        <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-charcoal text-white text-xs font-bold">Chef's Pick</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start gap-2 mb-2">
+                                <h3 class="font-serif text-xl font-bold text-charcoal">Oak-Grilled Prime Ribeye</h3>
+                                <span class="font-bold text-lg text-terracotta">$38</span>
+                            </div>
+                            <p class="text-stone-600 text-sm leading-relaxed">
+                                12oz dry-aged ribeye seared over white oak, served with roasted bone marrow butter, blistered asparagus, and truffle jus.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-stone-200/70 flex items-center justify-between text-xs text-stone-500">
+                            <span><i class="fa-solid fa-wheat-awn-circle-exclamation text-amber-600 mr-1"></i> Gluten-Free</span>
+                            <span>720 kcal</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Menu Item 4: Main -->
+                <article data-category="mains" class="menu-card group bg-cream rounded-2xl overflow-hidden border border-stone-200/80 hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="relative h-52 overflow-hidden bg-stone-200">
+                        <img 
+                            src="https://images.unsplash.com/photo-1473093295043-cdd812d0e601?auto=format&fit=crop&w=800&q=80" 
+                            alt="Truffle Wild Mushroom Tagliatelle" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x400/E7E5E4/1C1917?text=Truffle+Tagliatelle';"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        >
+                        <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/90 backdrop-blur text-xs font-bold text-sage">Vegetarian</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start gap-2 mb-2">
+                                <h3 class="font-serif text-xl font-bold text-charcoal">Wild Mushroom Tagliatelle</h3>
+                                <span class="font-bold text-lg text-terracotta">$26</span>
+                            </div>
+                            <p class="text-stone-600 text-sm leading-relaxed">
+                                Hand-cut egg pasta tossed with foraged chanterelles, black winter truffle cream, 24-month aged Parmigiano, and crispy sage.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-stone-200/70 flex items-center justify-between text-xs text-stone-500">
+                            <span><i class="fa-solid fa-utensils text-stone-400 mr-1"></i> House-Made Pasta</span>
+                            <span>590 kcal</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Menu Item 5: Dessert -->
+                <article data-category="desserts" class="menu-card group bg-cream rounded-2xl overflow-hidden border border-stone-200/80 hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="relative h-52 overflow-hidden bg-stone-200">
+                        <img 
+                            src="https://images.unsplash.com/photo-1551024601-bec78aea704b?auto=format&fit=crop&w=800&q=80" 
+                            alt="Cardamom & Honey Panna Cotta" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x400/E7E5E4/1C1917?text=Saffron+Panna+Cotta';"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        >
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start gap-2 mb-2">
+                                <h3 class="font-serif text-xl font-bold text-charcoal">Saffron & Pistachio Panna Cotta</h3>
+                                <span class="font-bold text-lg text-terracotta">$12</span>
+                            </div>
+                            <p class="text-stone-600 text-sm leading-relaxed">
+                                Silky vanilla bean and saffron cream topped with crushed Iranian pistachios, orange blossom honey, and candied figs.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-stone-200/70 flex items-center justify-between text-xs text-stone-500">
+                            <span><i class="fa-solid fa-wheat-awn-circle-exclamation text-amber-600 mr-1"></i> Gluten-Free</span>
+                            <span>390 kcal</span>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Menu Item 6: Drink -->
+                <article data-category="drinks" class="menu-card group bg-cream rounded-2xl overflow-hidden border border-stone-200/80 hover:shadow-xl transition-all duration-300 flex flex-col">
+                    <div class="relative h-52 overflow-hidden bg-stone-200">
+                        <img 
+                            src="https://images.unsplash.com/photo-1514362545857-3bc16c4c7d1b?auto=format&fit=crop&w=800&q=80" 
+                            alt="Smoked Blood Orange & Rosemary Spritz" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x400/E7E5E4/1C1917?text=Blood+Orange+Spritz';"
+                            class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                        >
+                        <span class="absolute top-3 left-3 px-3 py-1 rounded-full bg-white/90 backdrop-blur text-xs font-bold text-terracotta">Zero-Proof Option</span>
+                    </div>
+                    <div class="p-6 flex-1 flex flex-col justify-between">
+                        <div>
+                            <div class="flex justify-between items-start gap-2 mb-2">
+                                <h3 class="font-serif text-xl font-bold text-charcoal">Charred Blood Orange Spritz</h3>
+                                <span class="font-bold text-lg text-terracotta">$13</span>
+                            </div>
+                            <p class="text-stone-600 text-sm leading-relaxed">
+                                House-pressed blood orange juice, smoked rosemary syrup, botanical bitters, and sparkling mineral water over hand-carved ice.
+                            </p>
+                        </div>
+                        <div class="mt-4 pt-4 border-t border-stone-200/70 flex items-center justify-between text-xs text-stone-500">
+                            <span><i class="fa-solid fa-martini-glass-citrus text-terracotta mr-1"></i> Botanical</span>
+                            <span>110 kcal</span>
+                        </div>
+                    </div>
+                </article>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= SPECIAL OFFERS SECTION ================= -->
+    <section id="offers" class="py-20 bg-charcoal text-white relative overflow-hidden">
+        <!-- Subtle decorative circle -->
+        <div class="absolute -top-24 -right-24 w-96 h-96 rounded-full bg-terracotta/15 blur-3xl pointer-events-none"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row md:items-end justify-between mb-12 gap-4">
+                <div>
+                    <span class="text-amber-400 font-bold text-xs uppercase tracking-widest">Limited-Time Dining Deals</span>
+                    <h2 class="font-serif text-3xl sm:text-4xl font-bold mt-2">Special Offers & Experiences</h2>
+                </div>
+                <p class="text-stone-400 text-sm max-w-md">
+                    Mention any offer code when booking your table or present it to your server upon arrival.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Offer Card 1 -->
+                <div class="bg-stone-900/90 border border-stone-800 rounded-3xl p-8 flex flex-col justify-between hover:border-terracotta/60 transition-colors">
+                    <div>
+                        <div class="inline-block px-3 py-1 rounded-full bg-terracotta/20 text-orange-400 text-xs font-bold mb-4">
+                            Every Tuesday & Wednesday
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold mb-3">Midweek Tasting for Two</h3>
+                        <p class="text-stone-400 text-sm leading-relaxed mb-6">
+                            Enjoy two signature wood-fired mains, a shared artisanal starter, and a complimentary dessert platter crafted by our pastry chef.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-stone-800 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-stone-400 block">Bundle Price</span>
+                            <span class="font-serif text-2xl font-bold text-amber-400">$68</span>
+                            <span class="text-xs text-stone-500 line-through ml-1">$92</span>
+                        </div>
+                        <button onclick="copyOfferCode('MIDWEEK68')" class="px-4 py-2.5 rounded-xl bg-stone-800 hover:bg-terracotta text-xs font-bold uppercase tracking-wider transition-colors flex items-center gap-2">
+                            <span>Code: MIDWEEK68</span>
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Offer Card 2 -->
+                <div class="bg-gradient-to-br from-terracotta to-terracottaDark rounded-3xl p-8 flex flex-col justify-between shadow-xl shadow-terracotta/20">
+                    <div>
+                        <div class="inline-block px-3 py-1 rounded-full bg-white/20 text-white text-xs font-bold mb-4">
+                            Daily • 4:00 PM – 6:30 PM
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold mb-3">Golden Hour Social</h3>
+                        <p class="text-orange-100 text-sm leading-relaxed mb-6">
+                            Unwind on our garden terrace with 30% off all small plates, wood-fired flatbreads, and botanical craft spritzes.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-white/20 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-orange-200 block">Savings</span>
+                            <span class="font-serif text-2xl font-bold text-white">30% OFF</span>
+                        </div>
+                        <a href="#contact" class="px-5 py-2.5 rounded-xl bg-white text-charcoal hover:bg-cream text-xs font-bold uppercase tracking-wider transition-colors">
+                            Book Terrace
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Offer Card 3 -->
+                <div class="bg-stone-900/90 border border-stone-800 rounded-3xl p-8 flex flex-col justify-between hover:border-terracotta/60 transition-colors">
+                    <div>
+                        <div class="inline-block px-3 py-1 rounded-full bg-amber-500/20 text-amber-400 text-xs font-bold mb-4">
+                            Sunday Brunch Special
+                        </div>
+                        <h3 class="font-serif text-2xl font-bold mb-3">Weekend Harvest Feast</h3>
+                        <p class="text-stone-400 text-sm leading-relaxed mb-6">
+                            Order any two brunch entrées and receive bottomless freshly squeezed blood orange mimosas or artisanal pour-over coffee.
+                        </p>
+                    </div>
+                    <div class="pt-6 border-t border-stone-800 flex items-center justify-between">
+                        <div>
+                            <span class="text-xs text-stone-400 block">Sundays</span>
+                            <span class="font-serif text-xl font-bold text-white">10 AM – 2 PM</span>
+                        </div>
+                        <button onclick="copyOfferCode('BRUNCH26')" class="px-4 py-2.5 rounded-xl bg-stone-800 hover:bg-terracotta text-xs font-bold uppercase tracking-wider transition-colors flex items-center gap-2">
+                            <span>Code: BRUNCH26</span>
+                            <i class="fa-regular fa-copy"></i>
+                        </button>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CUSTOMER REVIEWS SECTION ================= -->
+    <section id="reviews" class="py-20 bg-cream">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center max-w-2xl mx-auto mb-14 space-y-3">
+                <span class="text-terracotta font-bold text-xs uppercase tracking-widest">Guest Experiences</span>
+                <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal">Loved by Food Enthusiasts</h2>
+                <p class="text-stone-600 text-sm sm:text-base">
+                    Hear what our guests have to say about their evenings around our hearth.
+                </p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                
+                <!-- Review 1 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-stone-200/70 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-gold text-sm mb-4 space-x-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-stone-700 italic leading-relaxed mb-6">
+                            "The Oak-Grilled Prime Ribeye was cooked to absolute perfection, and the subtle smokiness from the wood hearth elevates every single bite. Easily our favorite anniversary spot!"
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-stone-100">
+                        <div class="w-11 h-11 rounded-full bg-terracotta/15 text-terracotta font-bold flex items-center justify-center">
+                            EL
+                        </div>
+                        <div>
+                            <p class="font-bold text-sm text-charcoal">Elena Rostova</p>
+                            <p class="text-xs text-stone-500">Verified Diner • 2 weeks ago</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 2 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-stone-200/70 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-gold text-sm mb-4 space-x-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                        </div>
+                        <p class="text-stone-700 italic leading-relaxed mb-6">
+                            "Warm lighting, attentive staff, and extraordinary vegetarian dishes. The Wild Mushroom Tagliatelle and Saffron Panna Cotta are worth the trip alone."
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-stone-100">
+                        <div class="w-11 h-11 rounded-full bg-sage/15 text-sage font-bold flex items-center justify-center">
+                            MC
+                        </div>
+                        <div>
+                            <p class="font-bold text-sm text-charcoal">Marcus Chen</p>
+                            <p class="text-xs text-stone-500">Local Food Critic • 1 month ago</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Review 3 -->
+                <div class="bg-white p-8 rounded-3xl shadow-sm border border-stone-200/70 flex flex-col justify-between">
+                    <div>
+                        <div class="flex text-gold text-sm mb-4 space-x-1">
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star"></i>
+                            <i class="fa-solid fa-star-half-stroke"></i>
+                        </div>
+                        <p class="text-stone-700 italic leading-relaxed mb-6">
+                            "We booked the Midweek Tasting for Two on the terrace. Every dish felt thoughtfully plated and vibrant. Don't skip the Charred Blood Orange Spritz!"
+                        </p>
+                    </div>
+                    <div class="flex items-center space-x-3 pt-4 border-t border-stone-100">
+                        <div class="w-11 h-11 rounded-full bg-amber-500/15 text-amber-700 font-bold flex items-center justify-center">
+                            AP
+                        </div>
+                        <div>
+                            <p class="font-bold text-sm text-charcoal">Aisha Patel</p>
+                            <p class="text-xs text-stone-500">Verified Diner • 3 weeks ago</p>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CONTACT & LOCATION SECTION ================= -->
+    <section id="contact" class="py-20 bg-white border-t border-stone-200/80">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 lg:grid-cols-12 gap-12">
+                
+                <!-- Left Column: Location Details & Hours -->
+                <div class="lg:col-span-5 space-y-8">
+                    <div>
+                        <span class="text-terracotta font-bold text-xs uppercase tracking-widest">Visit Us</span>
+                        <h2 class="font-serif text-3xl sm:text-4xl font-bold text-charcoal mt-2">Location & Hours</h2>
+                        <p class="text-stone-600 text-sm mt-3 leading-relaxed">
+                            Nestled in the heart of the Arts District with complimentary valet parking after 5:00 PM.
+                        </p>
+                    </div>
+
+                    <div class="space-y-5">
+                        <!-- Address -->
+                        <div class="flex items-start space-x-4">
+                            <div class="w-11 h-11 rounded-2xl bg-orange-100 text-terracotta flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-location-dot text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-charcoal">Address</h3>
+                                <p class="text-sm text-stone-600 mt-0.5">742 Olive Grove Avenue, Arts District<br>Portland, OR 97205</p>
+                            </div>
+                        </div>
+
+                        <!-- Hours -->
+                        <div class="flex items-start space-x-4">
+                            <div class="w-11 h-11 rounded-2xl bg-orange-100 text-terracotta flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-regular fa-clock text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-charcoal">Opening Hours</h3>
+                                <ul class="text-sm text-stone-600 mt-0.5 space-y-1">
+                                    <li><span class="font-medium text-charcoal">Tue – Thu:</span> 12:00 PM – 10:00 PM</li>
+                                    <li><span class="font-medium text-charcoal">Fri – Sat:</span> 12:00 PM – 11:30 PM</li>
+                                    <li><span class="font-medium text-charcoal">Sunday:</span> 10:00 AM – 9:00 PM</li>
+                                    <li><span class="font-medium text-terracotta">Monday:</span> Closed</li>
+                                </ul>
+                            </div>
+                        </div>
+
+                        <!-- Phone & Email -->
+                        <div class="flex items-start space-x-4">
+                            <div class="w-11 h-11 rounded-2xl bg-orange-100 text-terracotta flex items-center justify-center shrink-0 mt-0.5">
+                                <i class="fa-solid fa-phone text-lg"></i>
+                            </div>
+                            <div>
+                                <h3 class="font-bold text-charcoal">Direct Contact</h3>
+                                <p class="text-sm text-stone-600 mt-0.5">Phone: (503) 555-0194</p>
+                                <p class="text-sm text-stone-600">Email: hello@saffronandstone.com</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Styled Visual Map Card -->
+                    <div class="rounded-2xl overflow-hidden border border-stone-200 bg-stone-100 relative h-48 flex items-center justify-center">
+                        <img 
+                            src="https://images.unsplash.com/photo-1524661135-423995f22d0b?auto=format&fit=crop&w=800&q=80" 
+                            alt="Map view of restaurant neighborhood" 
+                            onerror="this.onerror=null;this.src='https://placehold.co/600x300/E7E5E4/1C1917?text=742+Olive+Grove+Ave+Map';"
+                            class="w-full h-full object-cover opacity-80"
+                        >
+                        <div class="absolute inset-0 bg-charcoal/20 flex items-center justify-center">
+                            <a href="https://maps.google.com" target="_blank" rel="noopener noreferrer" class="px-5 py-2.5 rounded-full bg-white text-charcoal font-bold text-xs shadow-lg hover:bg-terracotta hover:text-white transition-colors flex items-center gap-2">
+                                <i class="fa-solid fa-diamond-turn-right text-terracotta"></i>
+                                <span>Open in Google Maps</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Interactive Table Reservation Form -->
+                <div class="lg:col-span-7">
+                    <div class="bg-cream p-8 sm:p-10 rounded-3xl border border-stone-200/90 shadow-sm">
+                        <h3 class="font-serif text-2xl sm:text-3xl font-bold text-charcoal mb-2">Reserve Your Table</h3>
+                        <p class="text-stone-600 text-sm mb-8">
+                            Book online for instant confirmation, or send us a message for private dining inquiries.
+                        </p>
+
+                        <form id="reservation-form" class="space-y-5">
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-5">
+                                <div>
+                                    <label for="guest-name" class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">Full Name *</label>
+                                    <input type="text" id="guest-name" required placeholder="e.g., Jordan Taylor" class="w-full px-4 py-3 rounded-xl bg-white border border-stone-300 text-sm focus:outline-none focus:border-terracotta focus:ring-2 focus:ring-terracotta/20">
+                                </div>
+                                <div>
+                                    <label for="guest-email" class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">Email Address *</label>
+                                    <input type="email" id="guest-email" required placeholder="jordan@example.com" class="w-full px-4 py-3 rounded-xl bg-white border border-stone-300 text-sm focus:outline-none focus:border-terracotta focus:ring-2 focus:ring-terracotta/20">
+                                </div>
+                            </div>
+
+                            <div class="grid grid-cols-1 sm:grid-cols-3 gap-5">
+                                <div>
+                                    <label for="res-date" class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">Date *</label>
+                                    <input type="date" id="res-date" required class="w-full px-4 py-3 rounded-xl bg-white border border-stone-300 text-sm focus:outline-none focus:border-terracotta focus:ring-2 focus:ring-terracotta/20">
+                                </div>
+                                <div>
+                                    <label for="res-time" class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">Time *</label>
+                                    <select id="res-time" class="w-full px-4 py-3 rounded-xl bg-white border border-stone-300 text-sm focus:outline-none focus:border-terracotta focus:ring-2 focus:ring-terracotta/20">
+                                        <option>5:30 PM</option>
+                                        <option selected>7:00 PM</option>
+                                        <option>8:00 PM</option>
+                                        <option>9:00 PM</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label for="res-guests" class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">Guests *</label>
+                                    <select id="res-guests" class="w-full px-4 py-3 rounded-xl bg-white border border-stone-300 text-sm focus:outline-none focus:border-terracotta focus:ring-2 focus:ring-terracotta/20">
+                                        <option>2 Guests</option>
+                                        <option>4 Guests</option>
+                                        <option>6 Guests</option>
+                                        <option>8+ (Private Room)</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div>
+                                <label for="res-notes" class="block text-xs font-bold uppercase tracking-wider text-stone-700 mb-2">Special Requests or Offer Code</label>
+                                <textarea id="res-notes" rows="3" placeholder="Allergies, anniversary celebration, or promo code (e.g., MIDWEEK68)..." class="w-full px-4 py-3 rounded-xl bg-white border border-stone-300 text-sm focus:outline-none focus:border-terracotta focus:ring-2 focus:ring-terracotta/20"></textarea>
+                            </div>
+
+                            <button type="submit" class="w-full py-4 rounded-xl bg-terracotta hover:bg-terracottaDark text-white font-bold text-base shadow-lg shadow-terracotta/20 transition-all">
+                                Confirm Reservation
+                            </button>
+                        </form>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FOOTER ================= -->
+    <footer class="bg-charcoal text-stone-400 py-12 border-t border-stone-800">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row items-center justify-between gap-6">
+            <div class="flex items-center space-x-2">
+                <span class="w-8 h-8 rounded-full bg-terracotta text-white flex items-center justify-center font-serif font-bold">S</span>
+                <span class="font-serif text-xl font-bold text-white">Saffron & Stone</span>
+            </div>
+            
+            <p class="text-xs text-center md:text-left">
+                &copy; 2026 Saffron & Stone Artisanal Kitchen. Crafted with passion for great food.
+            </p>
+
+            <div class="flex space-x-4">
+                <a href="#hero" aria-label="Instagram" class="w-9 h-9 rounded-full bg-stone-800 hover:bg-terracotta text-white flex items-center justify-center transition-colors">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a href="#hero" aria-label="Facebook" class="w-9 h-9 rounded-full bg-stone-800 hover:bg-terracotta text-white flex items-center justify-center transition-colors">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a href="#hero" aria-label="X Twitter" class="w-9 h-9 rounded-full bg-stone-800 hover:bg-terracotta text-white flex items-center justify-center transition-colors">
+                    <i class="fa-brands fa-x-twitter"></i>
+                </a>
+            </div>
+        </div>
+    </footer>
+
+    <!-- ================= CUSTOM NOTIFICATION TOAST (No alert() used) ================= -->
+    <div id="toast-notification" class="fixed bottom-6 right-6 z-50 transform translate-y-24 opacity-0 transition-all duration-300 pointer-events-none">
+        <div class="bg-charcoal text-white px-6 py-4 rounded-2xl shadow-2xl border border-stone-700 flex items-center space-x-3 max-w-sm">
+            <div class="w-8 h-8 rounded-full bg-sage text-white flex items-center justify-center shrink-0">
+                <i class="fa-solid fa-check"></i>
+            </div>
+            <p id="toast-message" class="text-sm font-medium">Action completed!</p>
+        </div>
+    </div>
+
+    <!-- ================= INTERACTIVE SCRIPTS ================= -->
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            // 1. Mobile Navigation Toggle
+            const mobileMenuBtn = document.getElementById('mobile-menu-btn');
+            const mobileMenu = document.getElementById('mobile-menu');
+
+            mobileMenuBtn.addEventListener('click', () => {
+                mobileMenu.classList.toggle('hidden');
+            });
+
+            // Close mobile menu when a link is clicked
+            mobileMenu.querySelectorAll('a').forEach(link => {
+                link.addEventListener('click', () => {
+                    mobileMenu.classList.add('hidden');
+                });
+            });
+
+            // 2. Menu Category Filtering
+            const filterButtons = document.querySelectorAll('.filter-btn');
+            const menuCards = document.querySelectorAll('.menu-card');
+
+            filterButtons.forEach(button => {
+                button.addEventListener('click', () => {
+                    // Update active button styling
+                    filterButtons.forEach(btn => {
+                        btn.classList.remove('bg-charcoal', 'text-white');
+                        btn.classList.add('bg-stone-100', 'text-stone-700');
+                    });
+                    button.classList.remove('bg-stone-100', 'text-stone-700');
+                    button.classList.add('bg-charcoal', 'text-white');
+
+                    const selectedCategory = button.getAttribute('data-category');
+
+                    // Show/hide menu items smoothly
+                    menuCards.forEach(card => {
+                        const cardCategory = card.getAttribute('data-category');
+                        if (selectedCategory === 'all' || selectedCategory === cardCategory) {
+                            card.classList.remove('hidden');
+                        } else {
+                            card.classList.add('hidden');
+                        }
+                    });
+                });
+            });
+
+            // 3. Set default date on reservation input to today
+            const dateInput = document.getElementById('res-date');
+            if (dateInput) {
+                const today = new Date().toISOString().split('T')[0];
+                dateInput.value = today;
+                dateInput.min = today;
+            }
+
+            // 4. Handle Reservation Form Submission
+            const reservationForm = document.getElementById('reservation-form');
+            reservationForm.addEventListener('submit', (e) => {
+                e.preventDefault();
+                const name = document.getElementById('guest-name').value.trim();
+                const date = document.getElementById('res-date').value;
+                const time = document.getElementById('res-time').value;
+                const guests = document.getElementById('res-guests').value;
+
+                showToast(`Table reserved for ${name} (${guests}) on ${date} at ${time}!`);
+                reservationForm.reset();
+                if (dateInput) dateInput.value = new Date().toISOString().split('T')[0];
+            });
+        });
+
+        // 5. Custom Toast Notification Helper
+        function showToast(message) {
+            const toast = document.getElementById('toast-notification');
+            const toastMessage = document.getElementById('toast-message');
+            
+            toastMessage.textContent = message;
+            toast.classList.remove('translate-y-24', 'opacity-0');
+            
+            setTimeout(() => {
+                toast.classList.add('translate-y-24', 'opacity-0');
+            }, 4000);
+        }
+
+        // 6. Copy Promo Code Helper (using execCommand fallback for iFrame safety)
+        function copyOfferCode(code) {
+            const tempInput = document.createElement('input');
+            tempInput.value = code;
+            document.body.appendChild(tempInput);
+            tempInput.select();
+            try {
+                document.execCommand('copy');
+                showToast(`Promo code "${code}" copied! Paste it in your reservation notes.`);
+            } catch (err) {
+                showToast(`Use code "${code}" when booking your table.`);
+            }
+            document.body.removeChild(tempInput);
+        }
+    </script>
+</body>
+</html>
