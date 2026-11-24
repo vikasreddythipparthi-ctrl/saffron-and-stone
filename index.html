@@ -42,13 +42,13 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between items-center h-20">
                 <!-- Brand Logo -->
-                <a href="#" class="flex items-center space-x-2 group">
+                <a href="#" class="flex items-center space-x-2 group whitespace-nowrap">
                     <span class="w-10 h-10 rounded-full bg-terracotta text-white flex items-center justify-center font-serif text-xl font-bold shadow-md group-hover:scale-105 transition-transform">S</span>
                     <span class="font-serif text-2xl font-bold tracking-tight text-charcoal">Saffron <span class="text-terracotta italic">&</span> Stone</span>
                 </a>
 
                 <!-- Desktop Navigation Links -->
-                <nav class="hidden md:flex items-center space-x-8 text-sm font-semibold text-stone-700">
+                <nav class="hidden xl:flex items-center space-x-6 text-sm font-semibold text-stone-700 2xl:space-x-8">
                     <a href="#hero" class="hover:text-terracotta transition-colors">Home</a>
                     <a href="#menu" class="hover:text-terracotta transition-colors">Our Menu</a>
                     <a href="#offers" class="hover:text-terracotta transition-colors">Special Offers</a>
@@ -58,11 +58,11 @@
 
                 <!-- CTA Button & Mobile Menu Toggle -->
                 <div class="flex items-center space-x-4">
-                    <a href="#contact" class="hidden sm:inline-flex items-center px-5 py-2.5 rounded-full bg-charcoal text-white text-sm font-semibold hover:bg-terracotta transition-colors shadow-sm">
+                    <a href="#contact" class="hidden xl:inline-flex items-center px-5 py-2.5 rounded-full bg-charcoal text-white text-sm font-semibold hover:bg-terracotta transition-colors shadow-sm">
                         Reserve a Table
                     </a>
                     <!-- Mobile Menu Button -->
-                    <button id="mobile-menu-btn" aria-label="Toggle Menu" class="md:hidden p-2.5 rounded-xl text-charcoal hover:bg-stone-200/70 focus:outline-none">
+                    <button id="mobile-menu-btn" aria-label="Toggle menu" aria-controls="mobile-menu" aria-expanded="false" class="xl:hidden p-2.5 rounded-xl text-charcoal hover:bg-stone-200/70 focus:outline-none">
                         <i class="fa-solid fa-bars text-xl"></i>
                     </button>
                 </div>
@@ -70,7 +70,7 @@
         </div>
 
         <!-- Mobile Navigation Dropdown -->
-        <div id="mobile-menu" class="hidden md:hidden bg-cream border-b border-stone-200 px-4 pt-2 pb-6 space-y-2 shadow-lg">
+        <div id="mobile-menu" class="hidden xl:hidden bg-cream border-b border-stone-200 px-4 pt-2 pb-6 space-y-2 shadow-lg">
             <a href="#hero" class="block px-4 py-3 rounded-xl text-base font-medium text-stone-800 hover:bg-stone-200/60">Home</a>
             <a href="#menu" class="block px-4 py-3 rounded-xl text-base font-medium text-stone-800 hover:bg-stone-200/60">Our Menu</a>
             <a href="#offers" class="block px-4 py-3 rounded-xl text-base font-medium text-stone-800 hover:bg-stone-200/60">Special Offers</a>
@@ -121,8 +121,8 @@
                             <p class="text-xs text-stone-500">Organic Produce</p>
                         </div>
                         <div>
-                            <p class="font-serif text-2xl font-bold text-charcoal">12 PM</p>
-                            <p class="text-xs text-stone-500">Open Daily</p>
+                            <p class="font-serif text-2xl font-bold text-charcoal">6 DAYS</p>
+                            <p class="text-xs text-stone-500">Open Tue – Sun</p>
                         </div>
                     </div>
                 </div>
@@ -170,19 +170,19 @@
 
             <!-- Interactive Category Filter Tabs -->
             <div class="flex flex-wrap justify-center gap-2 sm:gap-3 mb-12" id="menu-filters">
-                <button data-category="all" class="filter-btn active px-5 py-2.5 rounded-full text-sm font-semibold bg-charcoal text-white transition-all shadow-sm">
+                <button data-category="all" aria-pressed="true" class="filter-btn active px-5 py-2.5 rounded-full text-sm font-semibold bg-charcoal text-white transition-all shadow-sm">
                     All Dishes
                 </button>
-                <button data-category="starters" class="filter-btn px-5 py-2.5 rounded-full text-sm font-semibold bg-stone-100 text-stone-700 hover:bg-stone-200 transition-all">
+                <button data-category="starters" aria-pressed="false" class="filter-btn px-5 py-2.5 rounded-full text-sm font-semibold bg-stone-100 text-stone-700 hover:bg-stone-200 transition-all">
                     Starters & Small Plates
                 </button>
-                <button data-category="mains" class="filter-btn px-5 py-2.5 rounded-full text-sm font-semibold bg-stone-100 text-stone-700 hover:bg-stone-200 transition-all">
+                <button data-category="mains" aria-pressed="false" class="filter-btn px-5 py-2.5 rounded-full text-sm font-semibold bg-stone-100 text-stone-700 hover:bg-stone-200 transition-all">
                     Wood-Fired Mains
                 </button>
-                <button data-category="desserts" class="filter-btn px-5 py-2.5 rounded-full text-sm font-semibold bg-stone-100 text-stone-700 hover:bg-stone-200 transition-all">
+                <button data-category="desserts" aria-pressed="false" class="filter-btn px-5 py-2.5 rounded-full text-sm font-semibold bg-stone-100 text-stone-700 hover:bg-stone-200 transition-all">
                     Artisanal Desserts
                 </button>
-                <button data-category="drinks" class="filter-btn px-5 py-2.5 rounded-full text-sm font-semibold bg-stone-100 text-stone-700 hover:bg-stone-200 transition-all">
+                <button data-category="drinks" aria-pressed="false" class="filter-btn px-5 py-2.5 rounded-full text-sm font-semibold bg-stone-100 text-stone-700 hover:bg-stone-200 transition-all">
                     Craft Drinks
                 </button>
             </div>
@@ -723,12 +723,14 @@
 
             mobileMenuBtn.addEventListener('click', () => {
                 mobileMenu.classList.toggle('hidden');
+                mobileMenuBtn.setAttribute('aria-expanded', String(!mobileMenu.classList.contains('hidden')));
             });
 
             // Close mobile menu when a link is clicked
             mobileMenu.querySelectorAll('a').forEach(link => {
                 link.addEventListener('click', () => {
                     mobileMenu.classList.add('hidden');
+                    mobileMenuBtn.setAttribute('aria-expanded', 'false');
                 });
             });
 
@@ -742,9 +744,11 @@
                     filterButtons.forEach(btn => {
                         btn.classList.remove('bg-charcoal', 'text-white');
                         btn.classList.add('bg-stone-100', 'text-stone-700');
+                        btn.setAttribute('aria-pressed', 'false');
                     });
                     button.classList.remove('bg-stone-100', 'text-stone-700');
                     button.classList.add('bg-charcoal', 'text-white');
+                    button.setAttribute('aria-pressed', 'true');
 
                     const selectedCategory = button.getAttribute('data-category');
 
